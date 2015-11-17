@@ -1,0 +1,25 @@
+﻿@model MongoDB.AspNet.Models.Employee[]
+
+@{
+    ViewBag.Title = "MyView";
+}
+
+<h2>List of Employee</h2>
+<br />
+<table>
+    <tr>
+        <td>
+            Name
+        </td>
+    </tr>
+    @for (int i = 0; i < Model.Count(); i++)
+    {
+        <tr>
+            <td>@Model[i].Id</td>
+            <td>@Model[i].Name</td>
+            <td>@Model[i].Email</td>
+            <td>@Model[i].Level</td>
+            <td>@Model[i].CreateDate</td>
+        </tr>
+    }
+</table>
